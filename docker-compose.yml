@@ -1,0 +1,26 @@
+
+
+services:
+  portfolio-dev:
+    image: python:3.12-alpine
+    command: python -m http.server 8081
+    working_dir: /app
+    ports:
+      - "8081:8081"
+    volumes:
+      - ./:/app:ro
+
+  portfolio:
+    image: roxsross12/portfolio-devops:latest
+    build:
+      context: .
+      platforms:
+        - linux/amd64
+        - linux/arm64
+      tags:
+        - roxsross12/portfolio-devops:latest
+        - roxsross12/portfolio-devops:${VERSION:-1.0.0}
+    container_name: portfolio
+    ports:
+      - "8080:80"
+    restart: unless-stopped
