@@ -33,7 +33,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: roxsross12/portfolio-devop:develop-${{ steps.vars.outputs.short_sha }}
+          tags: roxsross12/portfolio-devops:develop-${{ steps.vars.outputs.short_sha }}
           platforms: linux/amd64,linux/arm64
 
       - name: Checkout GitOps repository
