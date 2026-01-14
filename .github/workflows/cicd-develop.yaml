@@ -1,4 +1,4 @@
-name: CI/CD Multiarch Portfolio Devop
+name: CI/CD Portfolio Devop
 
 on:
   push:
