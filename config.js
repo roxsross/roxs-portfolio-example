@@ -4,7 +4,7 @@
 const portfolioConfig = {
   // Personal Information
   personal: {
-    name: "Roxs",
+    name: "Roxs Ross",
     title: "DevOps Engineer",
     subtitle: "Cloud Architect & Automation Specialist",
     tagline: "On Fire 🔥",
