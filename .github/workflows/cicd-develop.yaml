@@ -41,16 +41,16 @@ jobs:
         with:
           repository: roxsross/roxs-gitops-devops
           token: ${{ secrets.GITOPS_REPO_TOKEN }}
-          path: gitops-repo
+          path: roxs-gitops-devops
 
       - name: Update image tag in ArgoCD Helm values
         run: |
-          cd gitops-repo/argocd-helm
+          cd roxs-gitops-devops/argocd-helm
           sed -i "s|tag:.*|tag: develop-${{ steps.vars.outputs.short_sha }}|g" values.yaml
 
       - name: Commit and push changes to GitOps repo
         run: |
-          cd gitops-repo
+          cd roxs-gitops-devops
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add .
