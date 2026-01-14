@@ -55,4 +55,4 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add .
           git commit -m "ci: update portfolio-devop image to develop-${{ steps.vars.outputs.short_sha }} [skip ci]"
-          git push origin main
+          git push origin master
