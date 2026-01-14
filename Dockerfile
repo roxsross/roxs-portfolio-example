@@ -1,6 +1,6 @@
 FROM nginx:alpine
 
-LABEL maintainer="ROXS"
+LABEL maintainer="roxsross"
 
 COPY . /usr/share/nginx/html
 
